@@ -217,6 +217,12 @@
             transform: translateX(22px);
         }
 
+        #small-msg {
+            font-size: 12px;
+            color: rgba(90, 0, 39, 0.4);
+            margin-top: 5px;
+            font-style: italic;
+        }
 </style>
 
 </head>
@@ -287,18 +293,18 @@
                         "<kbd>Incorrect username/password. Attempt " + attempt_counter + " of 3</kbd>";
                 }
             }
-        }
+            }
 
         function loginMessage() {
         let isOn = document.getElementById("stayLogged").checked;
 
         if (isOn) {
             document.getElementById("small-msg").innerHTML =
-                "blabla";
+                "Your session will stay active on this device";
         } else {
             document.getElementById("small-msg").innerHTML = "";
         }
-    }
+        }
         
     </script>
 </body>
