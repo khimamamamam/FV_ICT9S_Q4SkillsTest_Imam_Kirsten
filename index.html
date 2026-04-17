@@ -239,19 +239,19 @@
         <br>
 
         <p id="display" class="text-danger"></p>
-        
+        <br>
+
         <div class="d-flex align-items-center justify-content-center mb-3">
             <label class="switch me-2">
-                <input type="checkbox" id="stayLogged">
+                <input type="checkbox" id="stayLogged" onchange="loginMessage()">
                 <span class="slider"></span>
             </label>
             <span>Stay logged in</span>
         </div>
-        <br>
-        <p id="stayText" style="display:none; font-size:13px; color:#ffdce6;">
-            Your session will stay active on this device.
-        </p>
 
+        <p id="small-msg" class="text-center mt-2"></p>
+
+        <br><br>
         <input type="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
     </form>
     </div>
@@ -288,6 +288,18 @@
                 }
             }
         }
+
+        function loginMessage() {
+        let isOn = document.getElementById("stayLogged").checked;
+
+        if (isOn) {
+            document.getElementById("small-msg").innerHTML =
+                "blabla";
+        } else {
+            document.getElementById("small-msg").innerHTML = "";
+        }
+    }
+        
     </script>
 </body>
 </html>
