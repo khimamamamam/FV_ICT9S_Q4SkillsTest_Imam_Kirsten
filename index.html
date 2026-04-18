@@ -260,6 +260,7 @@
 
         <br><br>
         <input type="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
+        <input type="button" id="confirmLogout" value="Cancel" class="btn btn-info rounded-5" onclick="logout()">
         <br>
 
         <hr>
@@ -276,34 +277,33 @@
         let attempt_counter = 0;
         
         function authenticate() {
-            let username = document.getElementById("uname").value;
-            let pwd = document.getElementById("pwd").value;
+        let username = document.getElementById("uname").value;
+        let pwd = document.getElementById("pwd").value;
 
-            if (username === "" || pwd === "") {
-                alert("Please enter both username and password!");
-                return;
-            }
+        if (username === "" || pwd === "") {
+            alert("Please enter both username and password!");
+            return;
+        }
 
+        do {
             if (username === "hearty_pink" && pwd === "heartspinks") {
                 alert("Welcome " + username + "!");
                 attempt_counter = 0;
                 document.getElementById("display").innerHTML = "";
                 window.location.href = "notebooks.html";
-            } 
-            else {
+                break;
+            } else {
                 attempt_counter++;
+                document.getElementById("display").innerHTML =
+                    "Incorrect username/password. Attempt " + attempt_counter + " of 3";
+            }
+        } while (false);
 
-                if (attempt_counter >= 3) {
-                    document.getElementById("display").innerHTML =
-                        "Access denied. Account locked after 3 attempts!";
-                    document.getElementById("loginBTN").disabled = true;
-                } 
-                else {
-                    document.getElementById("display").innerHTML =
-                        "<kbd>Incorrect username/password. Attempt " + attempt_counter + " of 3</kbd>";
-                }
-            }
-            }
+        if (attempt_counter >= 3) {
+            alert("Account locked!");
+            document.getElementById("loginBTN").disabled = true;
+        }
+    }
 
         function loginMessage() {
         let isOn = document.getElementById("stayLogged").checked;
