@@ -115,8 +115,8 @@
             background-color: rgba(134, 187, 216, 0.9);
             color: #ffffff;
             border-color: rgba(51, 100, 138, 0.9);
-            box-shadow: 0 0 15px rgba(255, 0, 115, 0.5),
-                        0 0 30px rgba(255, 120, 170, 0.3);
+            box-shadow: 0 0 15px rgba(255, 208, 0, 0.5),
+                        0 0 30px rgba(255, 230, 120, 0.3);
         }
         
         .header {
@@ -129,26 +129,49 @@
         }
 
         .subject-card {
-            background: white;
-            border-radius: 18px;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 18px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(134, 187, 216, 0.2);
         }
 
         .subject-card:hover {
             transform: scale(1.05);
+            border-radius: 22px;
             box-shadow:
-                0 0 10px rgba(134, 187, 216, 0.7),
-                0 0 25px rgba(51, 100, 138, 0.5),
-                0 0 40px rgba(242, 101, 25, 0.3);
-            border: 1px solid rgba(134, 187, 216, 0.5);
+                0 0 10px rgba(120, 161, 255, 0.8),
+                0 0 25px rgba(51, 100, 138, 0.6),
+                0 0 45px rgba(25, 123, 242, 0.4),
+                0 0 70px rgba(134, 187, 216, 0.3);
+            border: 1px solid rgba(134, 187, 216, 0.7);
         }
 
         .subject-title {
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 22px;
+            font-weight: 800;
+            color: #145186;
+            background: linear-gradient(135deg, #6dadd6, #eddeb4);
+            padding: 10px 14px;
+            border-radius: 12px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 15px rgba(10, 82, 126, 0.25);
+        }
+
+        .subject-card p {
+            margin: 6px 0 2px;
+            font-size: 14px;
+        }
+
+        .subject-card small {
+            color: rgba(47, 72, 88, 0.7);
         }
 
         .subject-img {
@@ -159,9 +182,38 @@
             margin-bottom: 10px;
         }
 
-        .progress-bar {
-            height: 8px;
-            border-radius: 10px;
+        .subject-card .progress {
+            margin-top: auto;
+        }
+
+        .title {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 32px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            color: #2f4858;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 1px solid rgba(134, 187, 216, 0.4);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.1),
+                0 0 25px rgba(120, 161, 255, 0.2);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .accomplished-bar {
+            background: linear-gradient(90deg, #4a6fb3, #4d8dbe);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(51, 101, 138, 0.4);
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 20px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -204,8 +256,10 @@
 
     <div class="container py-4">
 
-        <div class="header">
-            <kbd>Virtual Notebooks</kbd>
+        <div class="header text-center my-4">
+            <div class="title">
+                Virtual Notebooks
+            </div>
         </div>
         <br>
         <div class="row g-4">
@@ -215,9 +269,9 @@
                     <div class="subject-title">Filipino</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/d5/71/8e/d5718e33daf8de4bf301586436fb4f59.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Ms. Francisco</small>
+                    <small>Ms. Jemima Nicole Francisco</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:70%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:70%"></div>
                     </div>
                 </div>
             </div>
@@ -227,9 +281,9 @@
                     <div class="subject-title">English</div>
                     <img class="subject-img" src="https://i.pinimg.com/736x/bd/46/8d/bd468dd0fc8520c030bd66416ab17597.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Ms. Avila</small>
+                    <small>Ms. Kristin Joy Avila</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:60%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:60%"></div>
                     </div>
                 </div>
             </div>
@@ -239,9 +293,9 @@
                     <div class="subject-title">Math</div>
                     <img class="subject-img" src="https://i.pinimg.com/736x/6c/3b/9b/6c3b9bb9bb116f798260553e59d3796d.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Verba</small>
+                    <small>Mr. Caleb Verba</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:80%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:80%"></div>
                     </div>
                 </div>
             </div>
@@ -251,9 +305,9 @@
                     <div class="subject-title">Science</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/9b/fa/f2/9bfaf2e373594a5f1b89f14f20100278.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Ms. Mendaro</small>
+                    <small>Ms. Jessica Mariz Mendaro</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:50%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:50%"></div>
                     </div>
                 </div>
             </div>
@@ -263,9 +317,9 @@
                     <div class="subject-title">Social Studies</div>
                     <img class="subject-img" src="https://i.pinimg.com/736x/74/b8/a9/74b8a9efcde9137b8e7d054d3a898c68.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Reynoso</small>
+                    <small>Mr. Jose Ma. Lorenzo Fernandez</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:65%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:65%"></div>
                     </div>
                 </div>
             </div>
@@ -275,9 +329,9 @@
                     <div class="subject-title">Values Education</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/87/96/c8/8796c821b370693fa0bfed83360c5c87.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Buntile</small>
+                    <small>Mr. Bernard Buntile</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:90%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:90%"></div>
                     </div>
                 </div>
             </div>
@@ -289,7 +343,7 @@
                     <p>9-Sapphire AY 2526</p>
                     <small>Ms. Del Barrio</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:60%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:60%"></div>
                     </div>
                 </div>
             </div>
@@ -299,9 +353,9 @@
                     <div class="subject-title">PEH</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/69/4e/38/694e3836c9be1bf98188e616dbb7861d.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Cases</small>
+                    <small>Mr. Alfred Cases</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:80%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:80%"></div>
                     </div>
                 </div>
             </div>
@@ -311,9 +365,9 @@
                     <div class="subject-title">Leadership Training</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/8b/78/91/8b789117227191641fbbb00e706ad135.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Ms. Manodon</small>
+                    <small>Ms. Flerida Kate Manodon</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:50%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:50%"></div>
                     </div>
                 </div>
             </div>
@@ -323,9 +377,9 @@
                     <div class="subject-title">Music and Arts</div>
                     <img class="subject-img" src="https://i.pinimg.com/736x/84/ad/76/84ad76ce76edcbf6fe841118d76d7781.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Martin</small>
+                    <small>Mr. Denver Martin</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:65%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:65%"></div>
                     </div>
                 </div>
             </div>
@@ -335,9 +389,9 @@
                     <div class="subject-title">ICT</div>
                     <img class="subject-img" src="https://i.pinimg.com/1200x/c1/7a/92/c17a92cfcd8108005d42aa63d825bc16.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Mr. Santos</small>
+                    <small>Mr. Renn Santos</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:90%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:90%"></div>
                     </div>
                 </div>
             </div>
@@ -347,9 +401,9 @@
                     <div class="subject-title">Homeroom</div>
                     <img class="subject-img" src="https://i.pinimg.com/736x/92/8d/f6/928df6b17e39159b18f5e131cfcb5f5e.jpg" alt="">
                     <p>9-Sapphire AY 2526</p>
-                    <small>Ms. Francisco</small>
+                    <small>Ms. Jemima Nicole Francisco</small>
                     <div class="progress mt-3">
-                        <div class="progress-bar bg-secondary" style="width:65%"></div>
+                        <div class="progress-bar accomplished-bar" style="width:65%"></div>
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@
             margin-top: 100px;
 
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 120, 165, 0.4);
+            border: 1px solid rgba(255, 215, 120, 0.4);
 
             animation: glowPulse 3s ease-in-out infinite;
         }
@@ -74,16 +74,16 @@
 
         @keyframes glowPulse {
             0% {
-                box-shadow: 0 0 20px rgba(255, 0, 81, 0.3),
-                            0 0 40px rgba(255, 0, 128, 0.2);
+                box-shadow: 0 0 20px rgba(0, 140, 255, 0.3),
+                            0 0 40px rgba(0, 106, 255, 0.2);
             }
             50% {
-                box-shadow: 0 0 40px rgba(255, 120, 167, 0.7),
-                            0 0 80px rgba(255, 0, 136, 0.5);
+                box-shadow: 0 0 40px rgba(120, 176, 255, 0.7),
+                            0 0 80px rgba(0, 140, 255, 0.5);
             }
             100% {
-                box-shadow: 0 0 20px rgba(255, 0, 72, 0.3),
-                            0 0 40px rgba(255, 0, 85, 0.2);
+                box-shadow: 0 0 20px rgba(0, 110, 255, 0.3),
+                            0 0 40px rgba(0, 94, 255, 0.2);
             }
         }
 
@@ -91,8 +91,8 @@
             font-family: 'Playfair Display', serif;
             font-size: 40px;
             letter-spacing: 3px;
-            color: #9b536b;
-            text-shadow: 0 0 12px rgba(241, 112, 188, 0.8);
+            color: #536c9b;
+            text-shadow: 0 0 12px rgba(112, 172, 241, 0.8);
         }
 
         h1::after {
@@ -100,52 +100,53 @@
             display: block;
             width: 70px;
             height: 2px;
-            background: linear-gradient(to right, #ff8bcb, #ffc4e7);
+            background: linear-gradient(to right, #ffe88b, #c4d8ff);
             margin: 12px auto 0;
         }
 
         .form-control {
             border-radius: 30px;
-            background: rgba(255, 120, 185, 0.2);
-            border: 1px solid rgba(255, 120, 188, 0.3);
-            color: #ffdced;
+            background: rgba(120, 167, 255, 0.2);
+            border: 1px solid rgba(120, 192, 255, 0.3);
+            color: #77551a;
             padding: 10px 15px;
         }
 
         .form-control:focus {
-            background: rgba(255, 120, 190, 0.2) !important;
-            color: #ffdce6 !important;
-            border: 1px solid rgba(255, 120, 197, 0.5);
-            box-shadow: 0 0 8px rgba(255, 0, 106, 0.5);
+            background: rgba(255, 197, 120, 0.2) !important;
+            color: #77551a !important;
+            border: 1px solid rgba(255, 203, 120, 0.5);
+            box-shadow: 0 0 8px rgba(255, 213, 0, 0.5);
         }
 
         .form-control::placeholder {
-            color: #b9849b;
+            color: #78693a;
         }
 
         .form-control:hover {
-            box-shadow: 0 0 10px rgba(255, 120, 192, 0.5);
+            box-shadow: 0 0 10px rgba(120, 161, 255, 0.5);
             transition: 0.3s;
         }
+        
         #loginBTN {
-            background-color: #ffaac0;
+            background-color: #aac8ff;
             border: none;
-            color: #5a0027;
+            color: #000e5a;
             border-radius: 30px;
             transition: all 0.3s ease;
         }
 
         #loginBTN:hover {
-            background-color: #ffc4da;
+            background-color: #fff3c4;
             transition: all 0.3 ease;
-            color: #5a0024;
-            box-shadow: 0 0 15px rgba(255, 0, 115, 0.8),
-                        0 0 30px rgba(255, 120, 170, 0.6);
+            color: #5a4a00;
+            box-shadow: 0 0 15px rgba(0, 81, 255, 0.8),
+                        0 0 30px rgba(120, 201, 255, 0.6);
         }
 
         kbd {
-            background: rgba(255, 223, 120, 0.15);
-            color: #5a0014;
+            background: rgba(255, 233, 120, 0.15);
+            color: #5a4500;
             padding: 3px 8px;
             border-radius: 10px;
             border: 1px solid rgba(255, 223, 120, 0.4);
@@ -153,25 +154,26 @@
         }
 
         #instructions {
-            background: rgba(255, 223, 120, 0.15);
+            background: rgba(120, 206, 255, 0.15);
             padding: 12px;
             border-radius: 10px;
             font-size: 13px;
-            border: 1px solid rgba(255, 223, 120, 0.4);
-            color: #fff8dc;
+            border: 1px solid rgba(120, 194, 255, 0.4);
+            color: #183371;
         }
 
         .btn-light {
-            background-color: #ffd700;
+            background-color: #97b3ff;
             border: none;
-            color: #5a4500;
+            color: #00125a;
             border-radius: 20px;
             transition: all 0.3s ease;
         }
 
         .btn-light:hover {
+            color: #946f2f;
             background-color: #fff3c4;
-            box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+            box-shadow: 0 0 12px rgba(0, 123, 255, 0.7);
         }
 
         .switch {
@@ -190,14 +192,14 @@
         .slider {
             position: absolute;
             cursor: pointer;
-            background: rgba(255, 120, 185, 0.4);
+            background: rgba(120, 170, 255, 0.4);
             border-radius: 34px;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             transition: 0.4s;
-            box-shadow: 0 0 8px rgba(255, 120, 185, 0.4);
+            box-shadow: 0 0 8px rgba(120, 174, 255, 0.4);
         }
 
         .slider:before {
@@ -210,12 +212,12 @@
             background: white;
             border-radius: 50%;
             transition: 0.4s;
-            box-shadow: 0 0 6px rgba(255, 0, 100, 0.5);
+            box-shadow: 0 0 6px rgba(0, 102, 255, 0.5);
         }
 
         input:checked + .slider {
-            background: linear-gradient(135deg, #ff7eb3, #ff4da6);
-            box-shadow: 0 0 12px rgba(255, 0, 128, 0.8);
+            background: linear-gradient(135deg, #7eb6ff, #4d94ff);
+            box-shadow: 0 0 12px rgba(255, 217, 0, 0.8);
         }
 
         input:checked + .slider:before {
@@ -224,9 +226,20 @@
 
         #small-msg {
             font-size: 12px;
-            color: rgba(90, 0, 39, 0.4);
+            color: rgba(0, 42, 90, 0.4);
             margin-top: 5px;
             font-style: italic;
+        }
+
+        .cancel-btn {
+            background-color: #b0b0b0;
+            color: white;
+            border: none;
+        }
+
+        .cancel-btn:hover {
+            background-color: #8f8f8f;
+            color: white;
         }
 </style>
 
@@ -265,7 +278,7 @@
 
         <br><br>
         <input type="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
-        <input type="button" id="confirmLogout" value="Cancel" class="btn btn-info rounded-5" onclick="logout()">
+        <input type="button" id="confirmLogout" value="Cancel" class="btn rounded-5 cancel-btn" onclick="logout()">
         <br>
 
         <hr>
@@ -276,7 +289,7 @@
     <script>
         function showInstructions() {
         document.getElementById("instructions").innerHTML = 
-                "Choose a username and enter the correct password. Password: RoyalcoreLover123";
+                "Choose a username and enter the correct password. Password: OBMC9Sapphire";
         }
 
         let attempt_counter = 0;
@@ -291,7 +304,7 @@
         }
 
         do {
-            if (pwd === "heartspinks") {
+            if (pwd === "OBMC9Sapphire") {
                 alert("Welcome " + username + "!");
                 attempt_counter = 0;
                 document.getElementById("display").innerHTML = "";
